@@ -25,7 +25,7 @@ public class MainActivity extends ListActivity {
         InternetRestAdapter movies_api = new InternetRestAdapter("http://api.themoviedb.org/");
 
         //Doing network request sending the parameters (Sort_by= "?", Key="?")for the request
-        retrofit.Call<Response> request = movies_api.getApi().requestMovieName("popularity.desc", "b980eff87da0a635d18c8bd29bad78b0");
+        retrofit.Call<Response> request = movies_api.getApi().requestMovieName("popularity.desc", "put ur API key here");
 
         //we invoke enqueue in case we need to make asynchronous request and this perfectly fits android framework.
         //if you would like to make synchronous request u can invoke "execute" method
