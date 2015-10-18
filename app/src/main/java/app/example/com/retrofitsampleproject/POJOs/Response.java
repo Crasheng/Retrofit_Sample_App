@@ -1,21 +1,40 @@
-package app.example.com.retrofitsampleproject;
+package app.example.com.retrofitsampleproject.POJOs;
 
 import java.util.List;
 
 /**
  * Created by Ahmad on 9/11/2015.
+ * Data Access Object blueprint for the Response of movies data from Internet
  */
 public class Response {
 
+    //Server Response.
+    /*{
+   "page":1,
+   "results":[
+      {
+         "adult":false,
+         "backdrop_path":"/tbhdm8UJAb4ViCTsulYFL3lxMCd.jpg",
+         "genre_ids":[
+            53,
+            28,
+            12
+         ],
+         "id":76341,
+         "original_language":"en",
+         "original_title":"Mad Max: Fury Road",
+         "overview":"An apocalyptic story set in the furthest reaches of .
+         "release_date":"2015-05-15",
+         "poster_path":"/kqjL17yufvn9OVLyXYpvtyrFfak.jpg",
+         "popularity":55.998703,
+         "title":"Mad Max: Fury Road",
+         "video":false,
+         "vote_average":7.6,
+         "vote_count":2187
+      }]
+      }*/
+
     private List<Movie> results;
-
-    public List<Movie> getResults() {
-        return results;
-    }
-
-    public void setResults(List<Movie> results) {
-        this.results = results;
-    }
 
     public Response(){}
 
@@ -24,7 +43,11 @@ public class Response {
         this.results = Results;
     }
 
-    class Movie
+    public List<Movie> getResults() {
+        return results;
+    }
+
+    public class Movie
     {
 
         private long id;
